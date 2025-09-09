@@ -3,6 +3,8 @@
 Swift-friendly wrappers for the Raspberry Pi GPIO via the [`pigpio`](http://abyz.me.uk/rpi/pigpio/) C library.
 Compatible with Raspberry PI 4, 3, zero.
 
+[!NOTE] : Project is still on heavy development not all functionalities of `pigpio` are implemented.
+
 ## Features
 
 - GPIO helpers with Swift enums (`GPIOMode`, `RaspberryPin`)
@@ -11,11 +13,12 @@ Compatible with Raspberry PI 4, 3, zero.
 
 ## Roadmap
 - [x] Test GPIO handler
-- [] Test I2C handler
-- [] Test SPI handler
+- [ ] Test I2C handler
+- [ ] Test SPI handler
 
 
-## Install `pigpio`
+## Install 
+### Install `pigpio`
 
 ```bash
 sudo apt update
@@ -23,6 +26,14 @@ sudo apt install pigpio
 sudo systemctl enable --now pigpiod
 # or start manually:
 # sudo pigpiod
+```
+### Add package to your project as dependency
+
+[!NOTE] : since the project will look for the `pigpio` library installed it will compile only on the Raspberry.
+```swift
+dependencies: [
+    .package(url: "https://github.com/DrAma999/SwiftPigpio", .upToNextMajor(from: "0.0.1"))
+]
 ```
 
 ## Build & Run
