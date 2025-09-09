@@ -1,0 +1,7 @@
+module Clibpigpio [system] {
+  //header "/usr/include/pigpio.h"
+  header "include/pigpio_shims.h"
+  link "pigpio"
+  link "pigpiod_if2"
+  export *
+}
