@@ -68,6 +68,9 @@ do {
 }
 ```
 
+## Documentation
+[link](https://drama999.github.io/SwiftPigpio/documentation/swiftpigpiowrapper/)
+
 ## Notes
 
 - Use **BCM numbering**: `RaspberryPin.physical12.bcm` → 18.
